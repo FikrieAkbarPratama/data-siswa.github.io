@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Siswa</title>
+    <title>-+-+-</title>
     <!-- fontAwesome -->
     <script src="https://kit.fontawesome.com/7dfe115e0d.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
@@ -20,10 +20,10 @@ session_start();
 <body>
     <div class="container">
             <div class="data_wrapper">
+                <div class="primary-title fs-1 mb-3 fw-bold text-center">Data Siswa</div>
                 <div class="little-title">List Data</div>
-
                 <table class="table  table-striped table-hover">
-                    <thead class="table-success">
+                    <thead class="table-success bg-green">
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Nama</th>

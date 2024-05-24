@@ -46,10 +46,6 @@ $alert = isset($_SESSION['alert']) ? $_SESSION['alert'] : null;
     <script src="https://kit.fontawesome.com/7dfe115e0d.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- googleFonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         function printOtherPage(url) {
             var printWindow = window.open(url, '_blank');
@@ -60,7 +56,7 @@ $alert = isset($_SESSION['alert']) ? $_SESSION['alert'] : null;
         }
     </script>
 </head>
-<body>
+<body >
     <div class="container">
         <h1 class="primary-heading text-center mb-5 mt-5">Menambahkan Data Siswa</h1>
         
