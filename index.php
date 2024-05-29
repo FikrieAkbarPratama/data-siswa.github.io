@@ -60,7 +60,28 @@ $alert = isset($_SESSION['alert']) ? $_SESSION['alert'] : null;
     <div class="container">
         <h1 class="primary-heading text-center mb-5 mt-5">Menambahkan Data Siswa</h1>
         
-        <?php require "alerts.php"?>
+        <?php if ($alert == 'success_add') : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Berhasil menambah!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php elseif ($alert == 'failure_add') : ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Gagal menambah!</strong> NIS yang anda masukkan sudah terdaftar.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php elseif ($alert == 'success_update') : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Berhasil mengubah!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php elseif ($alert == 'failure_update') : ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Gagal mengubah!</strong> NIS yang anda masukkan sudah terdaftar atau ID tidak valid.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
+
 
         <form action="" method="post">
             <div class="input_data_wrapper mb-5">
@@ -109,6 +130,7 @@ $alert = isset($_SESSION['alert']) ? $_SESSION['alert'] : null;
                         <td><?= $row['nis'] ?></td>
                         <td><?= $row['rayon'] ?></td>
                         <td>
+                            <a class="btn btn-primary" title="detail siswa" href="detail.php?id=<?= $key ?>" role="button"><i class="fa-solid fa-user"></i></a>
                             <a class="btn btn-warning" title="perbarui" href="update.php?id=<?= $key ?>" role="button"><i class="fa-solid fa-pen"></i></a>
                             <a class="btn btn-danger" title="hapus satu baris data" href="deleteRow.php?id=<?= $key ?>" role="button"><i class="fa-solid fa-trash"></i></a>
                         </td>
